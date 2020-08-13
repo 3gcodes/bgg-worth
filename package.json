@@ -1,0 +1,15 @@
+{
+  "name": "bgg-worth",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+  },
+  "keywords": [],
+  "author": "Gregg Bolinger",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "xml2js": "^0.4.23"
+  }
+}
