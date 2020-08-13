@@ -7,7 +7,7 @@
   },
   "keywords": [],
   "author": "Gregg Bolinger",
-  "license": "ISC",
+  "license": "Apache License 2.0",
   "dependencies": {
     "axios": "^0.19.2",
     "xml2js": "^0.4.23"

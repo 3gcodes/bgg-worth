@@ -2,7 +2,7 @@ const axios = require('axios');
 const parseString = require('xml2js').parseString;
 var fs = require('fs');
 
-const bggUrl = 'https://www.boardgamegeek.com/xmlapi2/collection?username=gdboling&brief=1';
+const bggUrl = 'https://www.boardgamegeek.com/xmlapi2/collection?username=gdboling&brief=1&own=1';
 
 let ids = [];
 let prices = [];
@@ -47,7 +47,7 @@ async function foo() {
                 try {
                     if (isNaN(product.price)) {
                         console.log("invalid number: " + product.price);
-                    } else {
+                    } else if (product.price <= 1000.00) {
                         p = p + parseFloat(product.price);
                     }          
                 }catch(e) {
@@ -56,11 +56,12 @@ async function foo() {
                 
             });
             if (p > 0) {
-                prices.push(parseFloat(p / products.length))
+                const value = parseFloat(p / products.length);
+                prices.push(value)
             }
 
             // let's not get blacklisted for a DDOS attack, wait a bit between requests
-            await sleep(1000);
+            await sleep(500);
         };
     }
 }
