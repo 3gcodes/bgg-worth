@@ -2,7 +2,7 @@ const axios = require('axios');
 const parseString = require('xml2js').parseString;
 var fs = require('fs');
 
-const bggUrl = 'https://www.boardgamegeek.com/xmlapi2/collection?username=gdboling&brief=1&own=1';
+const bggUrl = 'https://www.boardgamegeek.com/xmlapi2/collection?username=PowrThru&brief=1&own=1';
 
 let ids = [];
 let prices = [];
